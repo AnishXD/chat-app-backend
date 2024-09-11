@@ -67,7 +67,7 @@ export const login = async (req, res) => {
             maxAge: 1 * 24 * 60 * 60 * 1000, // 1 day
             httpOnly: false, // Allow access via JavaScript (optional, as default is false)
             sameSite: 'None', // Allow cross-site requests (if needed for cross-site scenarios)
-            secure: false // Allow cookie on both HTTP and HTTPS (optional, default is false)
+            secure: true // Allow cookie on both HTTP and HTTPS (optional, default is false)
         }).json({
             _id: user._id,
             username: user.username,
